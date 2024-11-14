@@ -1,0 +1,163 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(180deg, #ffcc00, #ff6600);
+}
+
+/* Pantalla de inicio */
+#main-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#main-menu h1 {
+    font-size: 48px;
+    font-family: 'Press Start 2P', cursive;
+    color: rgb(242, 189, 14);
+    margin-bottom: 100px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espacio entre los botones */
+    margin-top: 80px; /* Espacio superior entre el título y los botones */
+}
+
+.button-group button:hover,
+.player-selection button:hover {
+    display: block;
+    width: 100px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #f32b3f;
+    color: rgba(255, 255, 255, 0.805);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.player-selection button {
+    width: 100px;
+    padding: 20px;
+    font-size: 16px;
+    background-color: #fa4d1dd0;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button-group button:hover,
+.player-selection button:hover {
+    background-color: #e6a715;
+}
+
+.player-selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    gap: 40px; /* Espacio entre el selector y el botón de inicio */
+}
+
+.player-selection label {
+    font-size: 20px;
+    color: rgba(29, 24, 29, 0.004);
+    margin-bottom: 5px;
+}
+
+/* Estilos del ícono de sonido */
+#sound-icon {
+    position: absolute;
+    top: 10px;
+    right: 550px;
+    width: 30px;
+    cursor: pointer;
+}
+
+/* Estilos base del tablero */
+#game-board {
+    display: grid;
+    grid-template-columns: repeat(20, 40px);
+    gap: 5px;
+    margin: 20px auto;
+}
+
+/* Estilos de las celdas */
+.celda {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #120404;
+    background-color: #f5f5f5;
+}
+.celda.event-level-1 { background-color: #e6f7ff; }
+.celda.event-level-2 { background-color: #e6f7ff; }
+.celda.event-level-3 { background-color: #e6f7ff; }
+.celda.event-level-4 { background-color: #e6f7ff; }
+.celda.event-level-5 { background-color: #e6f7ff; }
+.celda.event-level-6 { background-color: #1378bb; }
+
+#event-panel {
+    margin-top: 50px;
+    padding: 20px;
+    border: 1px solid #e6dada;
+    background-color: #f4ebeb;
+}
+
+
+
+
+/* Responsive para pantallas pequeñas */
+@media (max-width: 768px) {
+    .tablero {
+        grid-template-columns: repeat(20, 25px);
+        grid-template-rows: repeat(18, 25px);
+        gap: 2px;
+        max-width: 90vw;
+    }
+    .celda {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Estilos del juego */
+#game-container {
+    text-align: center;
+}
+
+/* Animación de lanzamiento de dados */
+#dice-container img {
+    margin: 5px;
+    transition: transform 0.8s ease-in-out;
+}
+
+.roll-animation {
+    transform: rotate(360deg); /* Rotación de 360 grados */
+}
+
+/* Botón de lanzamiento de dados */
+#roll-dice {
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #f732139f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#roll-dice:hover {
+    background-color: #ee6c1cc3;
+}
